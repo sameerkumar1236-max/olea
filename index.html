@@ -110,6 +110,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px;background:var(--rai
 <div><h4>Reach</h4><a href="#">Foodhall · Nature's Basket</a><a href="#">Blinkit · Zepto</a><a href="#preorder">Pre-order</a></div></div>
 <div class="fbot"><span>© 2026 OLEA Foods · Fresh Mediterranean dips &amp; spreads · Made in India</span><span>Design prototype · imagery &amp; video are illustrative · trademark to be cleared</span></div></div></footer>
 <script>
+history.scrollRestoration='manual';addEventListener('load',function(){if(location.hash){history.replaceState(null,'',location.pathname);}window.scrollTo(0,0);});
 var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('stuck',scrollY>window.innerHeight*0.72)},{passive:true});
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
